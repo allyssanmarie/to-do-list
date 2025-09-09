@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
+    outline: none;
+    /*linha/contorno em volta do elemento*/
+}
+
+body {
+    background: url(./img/background.jpg) repeat center 80px;
+}
+
+.container {
+    background-color: #eff1ee;
+    width: 500px;
+    border-radius: 10px;
+    /* arredonda a borda do container*/
+    padding: 20px;
+    /*espaçamento interno*/
+    margin: 100px auto 0;
+    /*Se apenas um valor for especificado, a margem é aplicada a todos os quatro lados. Com dois valores, o primeiro é aplicado a cima e baixo, e o segundo a esquerda e direita. Com três valores, o primeiro é para cima, o segundo para a esquerda e direita, e o terceiro para baixo*/
+}
+
+.input-task {
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    height: 30px;
+    padding-left: 5px;
+    /*quando for escrever nao fica tao encostado no canto esquerdo*/
+}
+
+.button-add-task {
+    border: none;
+    border-radius: 5px;
+    height: 26px;
+    background-color: rgb(73, 138, 202);
+    color: #ffffff;
+    font-size: 14px;
+    padding: 3px 12px 0 12px;
+    float: right;
+    /*botao vai pra direita*/
+    cursor: cell;
+    /*cursor fica no formato escolhido quando esta no botao*/
+    font-weight: 600;
+}
+
+.button-add-task:hover {
+    /*hover seria um evento, tudo que acontece dentro da pag*/
+    opacity: 0.8;
+    /*botao fica um pouco opaco quando o mouse passa por cima*/
+
+}
+
+.button-add-task:active {
+    opacity: 0.6;
+    /*quando clicar fica mais opaco ainda*/
+}
+
+.list-tasks {
+    width: 100%;
+    /*pra ul ocupar a linha inteira*/
+    list-style: none;
+    /*tira a bolinha preta que vem com a lista*/
+    margin-top: 40px;
+
+}
+
+.task {
+    background-color: #ffffff;
+    box-shadow: 1px 4px 10px rgb(0, 0, 0, 0.2);
+    height: 50px;
+    display: flex;
+    /*as imagens ficaram na mesma linha*/
+    align-items: center;
+    justify-content: space-between;
+    /*os itens ficam completamente separados, pra cada extremidade*/
+    padding: 0 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: cell;
+
+}
+
+img {
+    height: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.task:hover img {
+    opacity: 1;
+
+}
+
+.done {
+    background-color: rgb(128, 177, 226);
+    text-decoration: line-through;  /*linha cortada*/
+}
